@@ -1,4 +1,5 @@
-function validateString (string) {
+function validateString(string)
+{
 	if(tourString(string) === false ) {
 			return false
 	} else {
@@ -6,11 +7,17 @@ function validateString (string) {
 	}
 }
 
-function tourString(string) {
+function tourString(string)
+{
 	for ( i = 0; i < string.length; i++ ) {
 		if ( string.charAt(i) != " " ) {
 			return true
 		}
 	}
 	return false
+}
+
+function replaceSpaces(string)
+{
+	return string.split(' ').join('_');
 }

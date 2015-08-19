@@ -23,7 +23,8 @@ class ItemsController extends BaseController {
 	public function itemsFilter($name)
 	{
 		if (Request::ajax()) {
-			$items = $this->itemRepo->like($name);
+
+			$items = $this->itemRepo->like(str_replace('_', ' ', $name));
 		
 			return View::make('items/items', compact('items'));
 		}

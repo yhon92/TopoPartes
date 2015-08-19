@@ -37,10 +37,11 @@
 			});
 
 			function loadItems (type) {
-				// console.log(type);
 				if ($txtSearch.val() !== '' && validateString($txtSearch.val())) {
 					if (type === 'filter') {
-						data = $txtSearch.val();
+
+						// data = $txtSearch.val();
+						data = replaceSpaces($txtSearch.val());
 						return $('#itemsHome').load('{{ route("items") }}' + '/filter/' + data);
 					}
 				}else if (type === 'all') {
