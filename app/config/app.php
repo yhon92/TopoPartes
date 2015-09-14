@@ -1,5 +1,11 @@
 <?php
 
+if ( getenv('APP_DEBUG') === 'true' ) {
+	$APP_DEBUG = true;
+}else if ( getenv('APP_DEBUG') === 'false' ) {
+	$APP_DEBUG = false;
+}
+
 return array(
 
 	/*
@@ -13,7 +19,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => $APP_DEBUG,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -26,7 +32,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://todopartesglobal.com.ve',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -78,7 +84,7 @@ return array(
 	|
 	*/
 
-	'key' => '5Clcfoz5hYBhUnNmeKIEVDy5atoJPiYs',
+	'key' => getenv('APP_KEY'),
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 

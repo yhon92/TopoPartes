@@ -24,10 +24,11 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
+$dotenv = new Dotenv\Dotenv(__DIR__.'/../');
+$dotenv->load();
+
 $env = $app->detectEnvironment(array(
-
-	'local' => array('homestead'),
-
+  'local' => array('homestead'),
 ));
 
 /*
@@ -55,7 +56,7 @@ $app->bindInstallPaths(require __DIR__.'/paths.php');
 */
 
 $framework = $app['path.base'].
-                 '/vendor/laravel/framework/src';
+'/vendor/laravel/framework/src';
 
 require $framework.'/Illuminate/Foundation/start.php';
 
