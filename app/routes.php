@@ -15,6 +15,10 @@
 
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
+Route::get('/nosotros', ['as' => 'we', 'uses' => function(){
+  return View::make('we');
+}]);
+
 Route::get('/items', ['as' => 'items', 'uses' => 'ItemsController@item']);
 Route::get('/items/all', ['as' => 'itemsAll', 'uses' => 'ItemsController@itemsAll']);
 Route::get('/items/filter/{name}', ['as' => 'itemsFilter', 'uses' => 'ItemsController@itemsFilter']);

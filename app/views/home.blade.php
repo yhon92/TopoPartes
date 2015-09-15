@@ -1,17 +1,17 @@
 @extends('layout')
 
 @section('content')
-<h1>Repuestos para vehículos más buscados</h1>
-<form id="searchform">
-	<input type="text" name="txtSearch" placeholder="Buscar aquí..." required >
-	<button id="btnSearch">Buscar</button>
+<h1 class="Home-title">Repuestos para vehículos más buscados</h1>
+<form class="Search-form">
+	<input class="Search-input" type="text" name="txtSearch" placeholder="Buscar aquí..." required >
+	<button class="Search-button" id="btnSearch">Buscar</button>
 </form>
-<section id="itemsHome"></section>
+<section class="Items" id="itemsContainer"></section>
 
 {{-- <div class="pagination"> {{ $items->links() }} </div> --}}
 
-<div class="botones">
-	<a href="#" id="showAll" class="boton">Ver todos los productos</a>
+<div class="Button-box">
+	<label id="showAll" class="u-button">Ver todos los productos</label>
 </div>
 @stop
 @section('body_script')
@@ -42,12 +42,12 @@
 
 						// data = $txtSearch.val();
 						data = replaceSpaces($txtSearch.val());
-						return $('#itemsHome').load('{{ route("items") }}' + '/filter/' + data);
+						return $('#itemsContainer').load('{{ route("items") }}' + '/filter/' + data);
 					}
 				}else if (type === 'all') {
-					return $('#itemsHome').load('{{ route("itemsAll") }}');
+					return $('#itemsContainer').load('{{ route("itemsAll") }}');
 				}else
-					return $('#itemsHome').load('{{ route("items") }}');
+					return $('#itemsContainer').load('{{ route("items") }}');
 			}
 
 			loadItems('topTen');

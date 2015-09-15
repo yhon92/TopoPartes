@@ -1,0 +1,271 @@
+@import 'nib'
+@import './font_awesome/index'
+
+.MainMenu
+  background #0C3652
+  box-shadow rgba(0,0,0,0.5) 0px 0px 10px
+  // display none
+  padding .5em 0
+  margin-top 0em
+  text-align center
+  // &-containerLogo
+  &-logo
+    img
+      display block
+      float left
+      font-size 26px
+      margin-right -15%
+      margin-top -35px
+      text-align left
+      width 140px
+  &-container
+    list-style none
+    margin 0
+    padding 0
+  &-option
+    display inline-block
+    margin 0em 2em 0 .5em
+  &-link
+    color white
+    display block
+    font-size 20px
+    margin-top -1em
+    padding .5em 0em
+    text-decoration none
+    transition all .4s ease-out
+    &:hover
+      /*background: #253438;*/
+      color white
+      display block
+      margin-top -1em
+      padding .5em 0em 0em 0em
+      border-bottom solid 2px white
+      
+.Footer
+  background #f3f3f3
+  // border-top 4px solid #f78e21
+  border-top 4px solid #24CB43
+  
+  // margin-top 420px
+  a
+    color #0C3652
+    text-decoration none
+    &:hover
+      color #f78e21
+      color #24CB43
+      text-decoration underline
+  .wrapper
+    margin-left 10%
+    margin-right 10%
+  &-social
+    margin 3% 0
+    margin 2% 0
+    span
+      font-size: 22px;
+      font-weight: 600;
+      color: #333;
+      text-transform: uppercase;
+      display inline-block
+      vertical-align middle
+      margin-left 1em
+    ul
+      margin: 0;
+      padding: 0;
+      display inline-block
+    li
+      list-style: none;
+      display: inline-block;
+    a
+      background-color: #fff;
+      font-size: 18px;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      color: #bbb;
+      text-decoration none
+      &:hover
+        background-color #f78e21
+        background-color #24CB43
+        color: #fff;
+        text-decoration none
+  &-title
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    // padding-bottom: 20px;
+  &-info
+    ul
+      margin: 0;
+      padding: 0;
+    li
+      list-style: none;
+      margin: 10px 0;
+      font-size: 13px;
+      color: #666;
+    i
+      color #f78e21
+      color #24CB43
+      margin-right: 10px;
+      font-size: 18px;
+  &-bottom
+    text-align center
+    p
+      margin 0;
+      padding 25px 0
+
+// .contenido
+  // padding-top: 3%;
+  // padding-left: 14%;
+.Home
+  &-title
+    color: #696969;
+    color #0C3652
+    margin-top: 5%;
+    text-align: center;
+    font-weight 400
+.Search
+  &-form
+    background: #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 2px 0 rgba(255,255,255,.5);
+    display: block;
+    height:30px;
+    margin: 0 auto;
+    padding: 8px;
+    width: 400px;
+  &-input
+    width: 310px;
+    height:20px;
+    padding: 5px;
+    float: left;
+    border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset;
+    outline none
+    &:hover
+      outline: 0;
+      height:21px;
+      background: #fff;
+      box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+  &-button
+    position: relative;
+    float: right;
+    border: 0;
+    cursor: pointer;
+    height: 30px;
+    width: 80px;
+    font-size:15px;
+    color: #fff;
+    background: #0C3652;
+    border-radius: 0 3px 3px 0;
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+    outline none
+    &:hover, &:focus
+      background: #2672e0;
+    &:before
+      content ''
+      position absolute
+      border-width 8px 8px 8px 0
+      border-style solid solid solid none
+      border-color transparent #0C3652 transparent
+      top 8px
+      left -5px
+    &:hover:before, &:focus:before
+      border-right-color: #2672e0;
+
+.Items
+  display flex
+  flex-direction column
+  text-align center
+  // &-quantify
+  &-container
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    padding 0 2% 0 3%;
+  &-box
+    padding .5em 0
+    height: 15.5em;
+    width: 15em;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.6)
+    margin-right: 1em;
+    margin-bottom: 1em;
+    transition:box-shadow 2s, transform 500ms, filter 500ms ease-in-out;
+    &:hover
+      transform: scale(1.05);
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+  &-img
+    // width: 190px;
+    width: 225px;
+    height: 170px;
+  &-title
+    font-size: 14px;
+    text-align: left;
+    margin-left: 1em;
+    margin-bottom: -1em;
+  &-price
+    font-size: 15px;
+    text-align: left;
+    margin-left: 1em;
+    // color #24CB43
+    color #1C7F2E
+
+.Button
+  &-box
+    text-align center
+.u-button
+  cursor pointer
+  background:#3498db;
+  box-shadow: 0px 7px 0px #205E87;
+  color: white;
+  display inline-block
+  // height: 56px;
+  border-radius 4px
+  margin: 1em;
+  // margin-left: 40%;
+  padding .8em .5em;
+  text-decoration: none;
+  transition:all .2s ease-out;
+  &:hover
+    background:#24CB43;
+    box-shadow: 0px 7px 0px #1C7F2E;
+
+.We
+  text-align center
+  padding-bottom 1.5em
+  &-title
+    background: #0C3652;
+    border-radius 5px
+    color: white;
+    display inline-block
+    padding: 1em 0;
+    padding: .5em 0;
+    text-align: center;
+    width 90%
+  &-image
+    display inline-block
+    background: #BABABB;
+    width: 40%;
+    box-shadow: 0px 0px 2px gray;
+    
+    img
+      display inline-block
+      // margin: 0 auto;
+      width: 100%;
+      // margin-left: 0%;
+      // margin-right: 7em;
+      // vertical-align: text-bottom;
+.History
+  display inline-block
+  width: 50%;
+  margin-left 10px
+  vertical-align top
+  &-title
+    color #0C3652
+    margin 0
+  &-text
+    color #333
+
+@import 'medias/querys'

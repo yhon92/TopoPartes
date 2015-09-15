@@ -1,12 +1,13 @@
-<h2>Cantidad de Productos: {{ count($items) }}</h2>
-
+<h2 class="Items-quantity">Cantidad de Productos: {{ count($items) }}</h2>
+<div class="Items-container">
 	@foreach ($items as $item)
-		<article class="cajas">
-			<img class="productos"src="{{ $item->img }}">
-			<h2>{{ $item->name }}</h2>
-			@if(Auth::check())
-				<h3>Precio: {{ $item->price }} Bs.F.</h3>
-			@endif
-		</article>
+	<article class="Items-box">
+		<img class="Items-img"src="{{ $item->img }}">
+		<h2 class="Items-title">{{ $item->name }}</h2>
+		@if(Auth::check())
+		<h3 class="Items-price">Precio: {{ $item->price }} Bs.F.</h3>
+		@endif
+	</article>
 	@endforeach
-	{{-- <div class="pagination"> {{ $items->links() }} </div> --}}
+</div>
+{{-- <div class="pagination"> {{ $items->links() }} </div> --}}
